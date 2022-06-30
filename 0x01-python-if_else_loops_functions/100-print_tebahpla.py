@@ -1,3 +1,6 @@
 #!/usr/bin/python3
-for letter in range(97, 123):
-    print("{}".format(chr(letter)), end="")
+for i in range(ord('z'), ord('a') - 1, -1):
+    if (i % 2 == 0):
+        print("{}".format(chr(i)), end="")
+    else:
+        print("{}".format(chr(i - 32)), end="")
