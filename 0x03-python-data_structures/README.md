@@ -1,0 +1,1 @@
+This directory is about data strutures in python programming language
