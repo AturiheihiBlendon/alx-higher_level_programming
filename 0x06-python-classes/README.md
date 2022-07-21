@@ -1,0 +1,1 @@
+This directory is about Python classes and objects
