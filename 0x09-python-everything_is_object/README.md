@@ -1,0 +1,1 @@
+This directory is about python-everything_is_object
