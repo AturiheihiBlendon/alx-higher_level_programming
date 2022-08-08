@@ -1,0 +1,1 @@
+This directory contains a recap of all the Python concepts covered
