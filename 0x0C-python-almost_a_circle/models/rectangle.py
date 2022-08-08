@@ -23,10 +23,10 @@ class Rectangle(Base):
             TypeError: If either of x or y is not an int
             ValueError: If either of x or y < 0
         """
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
         super().__init__(id)
 
     @property
@@ -85,18 +85,18 @@ class Rectangle(Base):
         """
         returns area of the rectangle
         """
-        return self.width * self.height
+        return self.__width * self.__height
 
     def display(self):
         """
         Print out the rectangle with character '#'
         """
-        for y in range(0, self.y):
+        for y in range(0, self.__y):
             print()
-        for i in range(0, self.height):
-            for x in range(0, self.x):
+        for i in range(0, self.__height):
+            for x in range(0, self.__x):
                 print(" ", end="")
-            for j in range(0, self.width):
+            for j in range(0, self.__width):
                 print("#", end="")
             print()
 
@@ -104,9 +104,9 @@ class Rectangle(Base):
         """
         String representation of the rectangle
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
-                                                       self.y, self.width,
-                                                       self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                       self.__y, self.__width,
+                                                       self.__height)
 
     def update(self, *args):
         if len(args) == 1:
