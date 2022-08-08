@@ -91,15 +91,14 @@ class Rectangle(Base):
         """
         Print out the rectangle with character '#'
         """
-        if self.width == 0 or self.height == 0:
-            print("")
-            return
-
-        [print("") for y in range(self.y)]
-        for h in range(self.height):
-            [print(" ", end="") for x in range(self.x)]
-            [print("#", end="") for w in range(self.width)]
-            print("")
+        for y in range(0, self.y):
+            print()
+        for i in range(0, self.height):
+            for x in range(0, self.x):
+                print(" ", end="")
+            for j in range(0, self.width):
+                print("#", end="")
+            print()
 
     def __str__(self):
         """
