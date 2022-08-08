@@ -91,18 +91,42 @@ class Rectangle(Base):
         """
         Print out the rectangle with character '#'
         """
-        if self.y > 0:
-            print("\n" * self.y, end="")
-        for i in range(0, self.height):
-            if self.x > 0:
-                print(" " * self.x, "#" * self.width)
-            else:
-                print("#" * self.width)
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
 
     def __str__(self):
         """
         String representation of the rectangle
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
                                                        self.y, self.width,
-                                                       self.height)
+                                                      self.height)
+
+    def update(self, *args):
+        if len(args) == 1:
+            self.id = args[0]
+        if len(args) == 2:
+            self.id = args[0]
+            self.width = args[1]
+        if len(args) == 3:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+        if len(args) == 4:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+        if len(args) == 5:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
