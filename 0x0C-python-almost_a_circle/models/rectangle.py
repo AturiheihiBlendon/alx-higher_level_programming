@@ -86,3 +86,11 @@ class Rectangle(Base):
         returns area of the rectangle
         """
         return self.width * self.height
+
+    def __str__(self):
+        """
+        String representation of the rectangle
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                       self.y, self.width,
+                                                       self.height)
