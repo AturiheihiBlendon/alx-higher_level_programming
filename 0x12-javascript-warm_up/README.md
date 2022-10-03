@@ -1,0 +1,1 @@
+This directory has tasks about modern javascript
