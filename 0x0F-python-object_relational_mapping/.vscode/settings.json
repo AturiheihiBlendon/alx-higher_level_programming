@@ -1,0 +1,32 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 1000,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "connectdb",
+            "database": "hbtn_0e_0_usa",
+            "username": "Blendon",
+            "connectionTimeout": 60,
+            "password": "password"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 1000,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Wsl",
+            "username": "Blendon",
+            "connectionTimeout": 60,
+            "password": "password",
+            "database": "hbtn_0e_0_usa"
+        }
+    ]
+}
