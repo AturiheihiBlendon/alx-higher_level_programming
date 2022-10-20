@@ -2,3 +2,4 @@
 7-model_state_fetch_all.sql
 __pycache__/
 .vscode
+14-model_city_fetch_by_state.sql
