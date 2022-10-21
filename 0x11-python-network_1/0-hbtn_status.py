@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-import urllib.request
-
 """Fetchs https://alx-intranet.hbtn.io/status
 """
+import urllib.request
 
 
 def fetch_url():
-    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status')\
-                                as response:
+    """funtion to fetch url
+    """
+    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') \
+         as response:
         res = response.read()
         print("Body response:")
         print("\t - type: {}".format(type(res)))
