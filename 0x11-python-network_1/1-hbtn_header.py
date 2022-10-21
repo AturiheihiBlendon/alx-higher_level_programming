@@ -11,8 +11,7 @@ def fetch_url():
     """funtion to displays the value
     of the X-Request_id in the header
     """
-    with urllib.request.urlopen(sys.argv[1]) \
-         as response:
+    with urllib.request.urlopen(sys.argv[1]) as response:
         res = response.headers.get('X-Request-Id')
         print(res)
 
